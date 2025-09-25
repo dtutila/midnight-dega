@@ -20,14 +20,7 @@ RUN apt-get update && apt-get install -y \
     unzip \
     && rm -rf /var/lib/apt/lists/*
 
-# Create a non-root user
-RUN groupadd --gid 1000 node \
-    && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
-
-# Switch to the non-root user for installations
-USER node
-
-# Install nvm
+# Install nvm (as root)
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/${NVM_VERSION}/install.sh | bash
 
 # Set up nvm environment and install Node.js
@@ -40,16 +33,20 @@ RUN /bin/bash -c "source ~/.nvm/nvm.sh && npm install -g corepack && corepack en
 RUN curl -fsSL https://bun.sh/install | bash -s "bun-v${BUN_VERSION}"
 
 # Add nvm and bun to PATH in bashrc
-RUN echo 'export NVM_DIR="$HOME/.nvm"' >> ~/.bashrc && \
-    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> ~/.bashrc && \
-    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> ~/.bashrc && \
-    echo 'export PATH="$HOME/.bun/bin:$PATH"' >> ~/.bashrc
+RUN echo 'export NVM_DIR="/root/.nvm"' >> /root/.bashrc && \
+    echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> /root/.bashrc && \
+    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> /root/.bashrc && \
+    echo 'export PATH="/root/.bun/bin:$PATH"' >> /root/.bashrc
 
 # Set the working directory
 WORKDIR /workspace
 
 # Verify installations
-RUN /bin/bash -c "source ~/.nvm/nvm.sh && node --version && npm --version && yarn --version && ~/.bun/bin/bun --version"
+RUN /bin/bash -c "source ~/.nvm/nvm.sh && node --version && npm --version && yarn --version && /root/.bun/bin/bun --version"
+
+RUN bun install -g @elizaos/cli@1.5.9
+
 
 # Default command
 CMD ["bash"]
+

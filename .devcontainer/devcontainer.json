@@ -45,7 +45,5 @@
     }
   },
 
-  "postCreateCommand": "yarn install",
-
-  "remoteUser": "node"
+  "postCreateCommand": "bash -c 'source ~/.nvm/nvm.sh && cd dao-contract && npm install && cd ../eliza-agent && bun install && cd ../midnight-mcp && yarn install'"
 }

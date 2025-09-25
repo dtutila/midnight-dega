@@ -16,7 +16,9 @@ services:
       dockerfile: Dockerfile
     container_name: midnight-dev
     volumes:
-      - ../..:/workspace:cached
+      - ../dao-contract:/workspace/dao-contract:cached
+      - ../eliza-agent:/workspace/eliza-agent:cached
+      - ../midnight-mcp:/workspace/midnight-mcp:cached
     working_dir: /workspace
     ports:
       - "3000:3000"
