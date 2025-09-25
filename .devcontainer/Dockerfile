@@ -10,6 +10,7 @@ ENV NVM_VERSION=v0.39.7
 # Install system dependencies
 RUN apt-get update && apt-get install -y \
     curl \
+    vim \
     wget \
     git \
     build-essential \
@@ -29,24 +30,45 @@ RUN /bin/bash -c "source ~/.nvm/nvm.sh && nvm install ${NODE_VERSION} && nvm use
 # Install Yarn 4.1.0 (using npm from nvm-installed Node.js)
 RUN /bin/bash -c "source ~/.nvm/nvm.sh && npm install -g corepack && corepack enable && corepack prepare yarn@${YARN_VERSION} --activate"
 
-# Install Bun 1.1.20
-RUN curl -fsSL https://bun.sh/install | bash -s "bun-v${BUN_VERSION}"
 
-# Add nvm and bun to PATH in bashrc
+
+# Set environment variables for PATH
+ENV NVM_DIR="/root/.nvm"
+ENV PATH="${NVM_DIR}/versions/node/v${NODE_VERSION}/bin:/root/.bun/bin:$PATH"
+
+# Add nvm and bun to PATH in bashrc for interactive shells
 RUN echo 'export NVM_DIR="/root/.nvm"' >> /root/.bashrc && \
     echo '[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"' >> /root/.bashrc && \
-    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> /root/.bashrc && \
-    echo 'export PATH="/root/.bun/bin:$PATH"' >> /root/.bashrc
+    echo '[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"' >> /root/.bashrc
+    
 
 # Set the working directory
 WORKDIR /workspace
 
 # Verify installations
-RUN /bin/bash -c "source ~/.nvm/nvm.sh && node --version && npm --version && yarn --version && /root/.bun/bin/bun --version"
+RUN /bin/bash -c "source ~/.nvm/nvm.sh && node --version && npm --version && yarn --version "
 
+# Install Bun 1.1.20 directly from GitHub releases
+RUN mkdir -p /root/.bun/bin && \
+    curl -fsSL https://github.com/oven-sh/bun/releases/download/bun-v${BUN_VERSION}/bun-linux-x64.zip -o bun.zip && \
+    unzip -j bun.zip "bun-linux-x64/bun" -d /root/.bun/bin && \
+    rm bun.zip && \
+    chmod +x /root/.bun/bin/bun && \
+    /root/.bun/bin/bun --version
+
+# Add Bun to PATH in bashrc for interactive shells
+RUN echo 'export PATH="/root/.bun/bin:$PATH"' >> /root/.bashrc
+
+# Install elizaoscli using the properly installed bun (without setting BUN_INSTALL to avoid interference)
 RUN /root/.bun/bin/bun install -g @elizaos/cli@1.5.9
 
-
+# Ensure bun symlink points to correct binary after elizaos installation
+RUN rm -f /root/.bun/bin/bun && \
+    curl -fsSL https://github.com/oven-sh/bun/releases/download/bun-v${BUN_VERSION}/bun-linux-x64.zip -o bun.zip && \
+    unzip -j bun.zip "bun-linux-x64/bun" -d /root/.bun/bin && \
+    rm bun.zip && \
+    chmod +x /root/.bun/bin/bun && \
+    /root/.bun/bin/bun --version
 # Default command
 CMD ["bash"]
 

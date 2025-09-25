@@ -19,7 +19,7 @@
         "ms-vscode.vscode-eslint"
       ],
       "settings": {
-        "terminal.integrated.shell.linux": "/bin/bash",
+        "terminal.integrated.defaultProfile.linux": "bash",
         "typescript.preferences.importModuleSpecifier": "relative"
       }
     }
@@ -45,5 +45,5 @@
     }
   },
 
-  "postCreateCommand": "bash -c 'source ~/.nvm/nvm.sh && cd dao-contract && npm install && cd ../eliza-agent && bun install && cd ../midnight-mcp && yarn install'"
+  "postCreateCommand": "bash -c 'node --version && bun --version'"
 }
