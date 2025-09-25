@@ -34,14 +34,14 @@
     "mcp": {
       "servers": {
         "midnight-mcp": {
-          "type": "stdio",
-          "name": "Midnight MCP",
-          "command": "bash",
-          "args": [
-            "-c",
-            "source ~/.nvm/nvm.sh && AGENT_ID=workshop nvm exec 22.15.1 node /Users/cerratoa/midnight-workshop-test/midnight-mcp/dist/stdio-server.js"
-          ]
-        }
+        "type": "stdio",
+        "name": "Midnight MCP",
+        "command": "bash",
+        "args": [
+          "-c",
+          "source ~/.nvm/nvm.sh && AGENT_ID=dustTempest nvm exec 22.15.1 node /workspace/midnight-mcp/dist/stdio-server.js"
+        ]
+      }
       }
     }
   },
