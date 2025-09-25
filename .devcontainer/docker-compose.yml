@@ -1,0 +1,36 @@
+version: '3.8'
+
+services:
+  midnight-proof-server:
+    image: midnightnetwork/proof-server:4.0.0
+    container_name: midnight-proof-server
+    ports:
+      - "8080:8080"
+    networks:
+      - midnight-network
+    restart: unless-stopped
+
+  dev-environment:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: midnight-dev
+    volumes:
+      - ../..:/workspace:cached
+    working_dir: /workspace
+    ports:
+      - "3000:3000"
+      - "5173:5173"
+      - "8000:8000"
+    networks:
+      - midnight-network
+    environment:
+      - NODE_ENV=development
+      - MIDNIGHT_PROOF_SERVER_URL=http://midnight-proof-server:8080
+    depends_on:
+      - midnight-proof-server
+    command: sleep infinity
+
+networks:
+  midnight-network:
+    driver: bridge
