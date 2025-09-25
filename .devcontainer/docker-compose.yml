@@ -4,7 +4,8 @@ services:
     image: midnightnetwork/proof-server:4.0.0
     container_name: midnight-proof-server
     ports:
-      - "8080:8080"
+      - "6300:6300"
+    command: ["midnight-proof-server", "--network", "testnet"]
     networks:
       - midnight-network
     restart: unless-stopped
@@ -27,7 +28,7 @@ services:
       - midnight-network
     environment:
       - NODE_ENV=development
-      - MIDNIGHT_PROOF_SERVER_URL=http://midnight-proof-server:8080
+      - MIDNIGHT_PROOF_SERVER_URL=http://midnight-proof-server:6300
     depends_on:
       - midnight-proof-server
     command: sleep infinity

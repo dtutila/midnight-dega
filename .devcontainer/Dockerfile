@@ -11,6 +11,7 @@ ENV NVM_VERSION=v0.39.7
 RUN apt-get update && apt-get install -y \
     curl \
     vim \
+    iputils-ping \
     wget \
     git \
     build-essential \
