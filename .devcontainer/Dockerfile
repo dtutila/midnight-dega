@@ -44,7 +44,7 @@ WORKDIR /workspace
 # Verify installations
 RUN /bin/bash -c "source ~/.nvm/nvm.sh && node --version && npm --version && yarn --version && /root/.bun/bin/bun --version"
 
-RUN bun install -g @elizaos/cli@1.5.9
+RUN /root/.bun/bin/bun install -g @elizaos/cli@1.5.9
 
 
 # Default command
