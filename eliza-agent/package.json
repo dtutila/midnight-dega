@@ -30,6 +30,7 @@
       "@elizaos/cli": "latest",
       "@elizaos/core": "latest",
       "@elizaos/plugin-bootstrap": "latest",
+      "@elizaos/plugin-telegram": "latest",
       "@elizaos/plugin-discord": "1.2.5",
       "@elizaos/plugin-mcp": "1.0.7",
       "@elizaos/plugin-ollama": "^1.2.1",

@@ -25,7 +25,7 @@
     "@elizaos/plugin-openai",
     "@elizaos/plugin-bootstrap",
     "@elizaos/plugin-mcp",
-    "@elizaos/plugin-discord"
+    "@elizaos/plugin-telegram"
   ],
   "settings": {
     "voice": {
@@ -63,5 +63,13 @@
       "practical",
       "brief"
     ]
+  },
+  "clients": ["telegram"],
+  "allowDirectMessages": true,
+  "shouldOnlyJoinInAllowedGroups": true,
+  "allowedGroupIds": ["-123456789", "-987654321"],
+  "messageTrackingLimit": 100,
+  "templates": {
+    "telegramMessageHandlerTemplate": "Your custom template here"
   }
 }
