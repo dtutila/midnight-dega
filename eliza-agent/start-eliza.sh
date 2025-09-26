@@ -18,4 +18,4 @@ export NODE_OPTIONS="--dns-result-order=ipv4first"
 
 # Start ElizaOS
 echo "Launching ElizaOS..."
-elizaos start --port 3010
+elizaos start --port 3010 

@@ -9,16 +9,8 @@
   ],
   "messageExamples": [],
   "postExamples": [],
-  "topics": [
-    "Technology"
-  ],
-  "adjectives": [
-    "efficient",
-    "clear",
-    "concise",
-    "brief",
-    "direct"
-  ],
+  "topics": ["Technology"],
+  "adjectives": ["efficient", "clear", "concise", "brief", "direct"],
   "knowledge": [],
   "plugins": [
     "@elizaos/plugin-sql",
@@ -34,42 +26,20 @@
     "mcp": {
       "servers": {
         "midnight-mcp": {
-        "type": "stdio",
-        "name": "Midnight MCP",
-        "command": "bash",
-        "args": [
-          "-c",
-          "source ~/.nvm/nvm.sh && AGENT_ID=dustTempest nvm exec 22.15.1 node /workspace/midnight-mcp/dist/stdio-server.js"
-        ]
-      }
+          "type": "stdio",
+          "name": "Midnight MCP",
+          "command": "bash",
+          "args": [
+            "-c",
+            "source ~/.nvm/nvm.sh && AGENT_ID=dustTempest nvm exec 22.15.1 node /workspace/midnight-mcp/dist/stdio-server.js"
+          ]
+        }
       }
     }
   },
   "style": {
-    "all": [
-      "clear",
-      "concise",
-      "brief",
-      "direct"
-    ],
-    "chat": [
-      "responsive",
-      "concise",
-      "brief",
-      "no-follow-up"
-    ],
-    "post": [
-      "concise",
-      "practical",
-      "brief"
-    ]
-  },
-  "clients": ["telegram"],
-  "allowDirectMessages": true,
-  "shouldOnlyJoinInAllowedGroups": true,
-  "allowedGroupIds": ["-123456789", "-987654321"],
-  "messageTrackingLimit": 100,
-  "templates": {
-    "telegramMessageHandlerTemplate": "Your custom template here"
+    "all": ["clear", "concise", "brief", "direct"],
+    "chat": ["responsive", "concise", "brief", "no-follow-up"],
+    "post": ["concise", "practical", "brief"]
   }
 }

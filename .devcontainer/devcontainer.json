@@ -16,7 +16,17 @@
         "bradlc.vscode-tailwindcss",
         "esbenp.prettier-vscode",
         "ms-vscode.vscode-json",
-        "ms-vscode.vscode-eslint"
+        "ms-vscode.vscode-eslint",
+        "ms-vscode.vscode-jest",
+        "vitest.explorer",
+        "cypress-io.cypress-helper",
+        "usernamehw.errorlens",
+        "christian-kohler.path-intellisense",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.references-view",
+        "tyriar.sort-lines",
+      
+        "ms-vscode.vscode-json-languageservice"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",
@@ -25,7 +35,14 @@
     }
   },
 
-
+  "forwardPorts": [3010],
+  "portsAttributes": {
+    "3010": {
+      "label": "ElizaOS Server",
+      "onAutoForward": "notify"
+    }
+   
+  },
 
   "postCreateCommand": "bash -c 'node --version && bun --version'"
 }
