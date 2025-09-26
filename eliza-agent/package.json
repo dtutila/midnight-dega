@@ -56,7 +56,8 @@
     "vite": "^6.0.1"
   },
     "scripts": {
-      "start": "elizaos start",
+      "start": "elizaos start --port 3010",
+      "start:safe": "./start-eliza.sh",
       "dev": "elizaos dev",
       "build": "tsc --noEmit && vite build && tsup",
       "lint": "prettier --write ./src",

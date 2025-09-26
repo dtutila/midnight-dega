@@ -19,9 +19,10 @@ services:
       - ../dao-contract:/workspace/dao-contract:cached
       - ../eliza-agent:/workspace/eliza-agent:cached
       - ../midnight-mcp:/workspace/midnight-mcp:cached
+      - ../.devcontainer:/workspace/.devcontainer:cached
     working_dir: /workspace
     ports:
-      - "3000:3000"
+      - "3010:3010"
       - "5173:5173"
       - "8000:8000"
     networks:
@@ -29,6 +30,7 @@ services:
     environment:
       - NODE_ENV=development
       - MIDNIGHT_PROOF_SERVER_URL=http://midnight-proof-server:6300
+      - SERVER_PORT=3010
     depends_on:
       - midnight-proof-server
     command: sleep infinity
