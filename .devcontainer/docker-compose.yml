@@ -19,6 +19,7 @@ services:
       - ../dao-contract:/workspace/dao-contract:cached
       - ../eliza-agent:/workspace/eliza-agent:cached
       - ../midnight-mcp:/workspace/midnight-mcp:cached
+      - ../landing:/workspace/landing:cached
       - ../.devcontainer:/workspace/.devcontainer:cached
     working_dir: /workspace
     ports:
