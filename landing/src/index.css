@@ -107,26 +107,6 @@
   @apply bg-clip-text text-transparent bg-gradient-to-r from-arcade-purple to-arcade-pink;
 }
 
-.terminal {
-  background-color: #11141F;
-  border-radius: 8px;
-  padding: 16px;
-  font-family: monospace;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
-}
-
-.terminal-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.terminal-button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  margin-right: 6px;
-}
 
 .close-button {
   background-color: #FF5F56;

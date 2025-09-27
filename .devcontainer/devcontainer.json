@@ -18,15 +18,7 @@
         "ms-vscode.vscode-json",
         "ms-vscode.vscode-eslint",
         "ms-vscode.vscode-jest",
-        "vitest.explorer",
-        "cypress-io.cypress-helper",
-        "usernamehw.errorlens",
-        "christian-kohler.path-intellisense",
-        "formulahendry.auto-rename-tag",
-        "ms-vscode.references-view",
-        "tyriar.sort-lines",
-      
-        "ms-vscode.vscode-json-languageservice"
+        "christian-kohler.path-intellisense"
       ],
       "settings": {
         "terminal.integrated.defaultProfile.linux": "bash",

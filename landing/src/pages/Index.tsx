@@ -21,7 +21,7 @@ const Index = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-arcade-dark">
+    <div className="min-h-[60vh] bg-arcade-dark">
       <div className="flex-1">
         <Header />
         <HeroSection loaded={loaded} />
