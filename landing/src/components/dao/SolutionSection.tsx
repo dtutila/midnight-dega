@@ -45,7 +45,7 @@ const SolutionSection = () => {
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            <span className="gradient-text">Your AI Treasury Copilot</span>
+            <span className="gradient-text">Your AI Treasury Advisor</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-4xl mx-auto mb-6">
             Intelligent automation meets privacy-first architecture. Manage your DAO treasury through conversational AI agents that orchestrate complex financial operations.

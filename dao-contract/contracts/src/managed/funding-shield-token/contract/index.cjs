@@ -485,7 +485,7 @@ class Contract {
                                                                                      { popeq: { cached: false,
                                                                                                 result: undefined } }]).value));
     const amount_0 = 1000n;
-    const FUNDING_SHIELD_TOKEN_ASSET_ID_0 = new Uint8Array([100, 101, 103, 97, 95, 102, 117, 110, 100, 105, 110, 103, 95, 116, 111, 107, 101, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    const FUNDING_SHIELD_TOKEN_ASSET_ID_0 = new Uint8Array([110, 105, 103, 104, 116, 95, 102, 117, 110, 100, 105, 110, 103, 95, 116, 111, 107, 101, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     const tmp_1 = ((t1) => {
                     if (t1 > 18446744073709551615n)
                       throw new __compactRuntime.CompactError('funding-shield-token.compact line 24 char 9: cast from unsigned value to smaller unsigned value failed: ' + t1 + ' is greater than 18446744073709551615');

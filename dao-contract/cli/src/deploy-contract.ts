@@ -14,7 +14,7 @@ import { nativeToken } from '@midnight-ntwrk/ledger';
 import { fileURLToPath } from 'url';
 import { dirname, join } from 'path';
 import { writeFileSync } from 'fs';
-import { getLedgerNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
+import { getLedgerNetworkId, getZswapNetworkId } from '@midnight-ntwrk/midnight-js-network-id';
 
 // Load environment variables from .env file
 const __filename = fileURLToPath(import.meta.url);
@@ -74,7 +74,11 @@ export const deployContract = async (config?: Config): Promise<DeploymentResult>
   setLogger(logger);
   
   logger.info('Starting contract deployment...');
-  
+
+  // Debug network ID configuration
+  logger.info(`Current Ledger Network ID: ${getLedgerNetworkId()}`);
+  logger.info(`Current Zswap Network ID: ${getZswapNetworkId()}`);
+
   // Validate environment variables
   const env = validateEnvironmentVariables();
   

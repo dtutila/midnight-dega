@@ -56,7 +56,7 @@ export function parseTokenConfigFromEnv(envValue: string): TokenConfig | null {
 /**
  * Parse multiple token configurations from environment variable
  * Expected format: TOKEN1_CONFIG|TOKEN2_CONFIG|TOKEN3_CONFIG
- * Example: DAO_VOTING:DVT:0x1234567890abcdef:dega_dao_vote:DAO voting token|FUNDING:FUND:0xfedcba0987654321:dega_funding_token:Funding token
+ * Example: DAO_VOTING:DVT:0x1234567890abcdef:dega_dao_vote:DAO voting token|FUNDING:FUND:0xfedcba0987654321:night_funding_token:Funding token
  */
 export function parseTokensFromEnv(envValue: string): TokenConfig[] {
   if (!envValue || envValue.trim() === '') {

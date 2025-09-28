@@ -82,7 +82,7 @@ function padBytes(n: number, s: string): Uint8Array {
  * @returns Vote coin color as hex string
  */
 function generateVoteCoinColor(voteTokenContractAddress: string): string {
-  const domainSep = padBytes(32, 'dega_dao_vote');
+  const domainSep = padBytes(32, 'night_dao_vote');
   return tokenType(domainSep, voteTokenContractAddress);
 }
 
@@ -92,7 +92,7 @@ function generateVoteCoinColor(voteTokenContractAddress: string): string {
  * @returns Fund coin color as hex string
  */
 function generateFundCoinColor(fundTokenContractAddress: string): string {
-  const domainSep = padBytes(32, 'dega_funding_token');
+  const domainSep = padBytes(32, 'night_funding_token');
   return tokenType(domainSep, fundTokenContractAddress);
 }
 

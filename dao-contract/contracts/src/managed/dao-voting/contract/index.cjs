@@ -533,7 +533,7 @@ class Contract {
                      { ins: { cached: false, n: 1 } }]);
     const tmp_0 = this.#_tokenType_0(context,
                                      partialProofData,
-                                     new Uint8Array([100, 101, 103, 97, 95, 102, 117, 110, 100, 105, 110, 103, 95, 116, 111, 107, 101, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
+                                     new Uint8Array([110, 105, 103, 104, 116, 95, 102, 117, 110, 100, 105, 110, 103, 95, 116, 111, 107, 101, 110, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]),
                                      funding_token_address_0);
     Contract._query(context,
                     partialProofData,

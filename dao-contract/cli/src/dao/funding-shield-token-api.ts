@@ -14,7 +14,7 @@
 // limitations under the License.
 
 import { type ContractAddress } from '@midnight-ntwrk/compact-runtime';
-import { FundingShieldToken, type FundingShieldTokenPrivateState, witnesses } from 'midnight-workshop-dao-contracts';
+import { FundingShieldToken, type FundingShieldTokenPrivateState, witnesses } from 'dao-contract';
 import { type FinalizedTxData } from '@midnight-ntwrk/midnight-js-types';
 import { deployContract, findDeployedContract } from '@midnight-ntwrk/midnight-js-contracts';
 import { type Logger } from 'pino';

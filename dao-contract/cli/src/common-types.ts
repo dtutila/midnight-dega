@@ -13,7 +13,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { MarketplaceRegistry, type MarketplaceRegistryPrivateState } from 'midnight-workshop-dao-contracts';
+import { MarketplaceRegistry, type MarketplaceRegistryPrivateState } from 'dao-contract';
 import type { ImpureCircuitId, MidnightProviders } from '@midnight-ntwrk/midnight-js-types';
 import type { DeployedContract, FoundContract } from '@midnight-ntwrk/midnight-js-contracts';
 

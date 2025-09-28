@@ -14,7 +14,7 @@
 // limitations under the License.
 
 import { type ContractAddress, tokenType } from '@midnight-ntwrk/compact-runtime';
-import { DaoShieldedToken, type DaoShieldedTokenPrivateState, witnesses } from 'midnight-workshop-dao-contracts';
+import { DaoShieldedToken, type DaoShieldedTokenPrivateState, witnesses } from 'dao-contract';
 import { type FinalizedTxData } from '@midnight-ntwrk/midnight-js-types';
 import { deployContract, findDeployedContract } from '@midnight-ntwrk/midnight-js-contracts';
 import { type Logger } from 'pino';
@@ -111,7 +111,7 @@ export const displayDaoShieldedTokenState = async (
 // Helper function to generate token type identifier using the proper tokenType function
 const generateTokenType = (contractAddress: string): string => {
   // Build a 32-byte domain separator for DAO tokens
-  const domainSep = padBytes(32, 'dega_dao_vote');
+  const domainSep = padBytes(32, 'night_dao_vote');
   
   // Use the built-in tokenType function to derive the TokenType
   const tokenTypeHex: string = tokenType(domainSep, contractAddress);

@@ -36,7 +36,7 @@ let logger: Logger;
 const createFundingCoin = (fundingTokenAddress: string): any => {
   return {
     nonce: randomBytes(32),                    // Random nonce for uniqueness
-    color: encodeTokenType(tokenType(pad('dega_funding_token', 32), fundingTokenAddress)),
+    color: encodeTokenType(tokenType(pad('night_funding_token', 32), fundingTokenAddress)),
     value: 100n,                               // Fixed payment amount
   };
 };
@@ -45,7 +45,7 @@ const createFundingCoin = (fundingTokenAddress: string): any => {
 const createDaoVoteCoin = (daoVoteTokenAddress: string): any => {
   return {
     nonce: randomBytes(32),                    // Random nonce for uniqueness
-    color: encodeTokenType(tokenType(pad('dega_dao_vote', 32), daoVoteTokenAddress)),
+    color: encodeTokenType(tokenType(pad('night_dao_vote', 32), daoVoteTokenAddress)),
     value: 500n,                               // Required amount for voting (500 tokens)
   };
 };

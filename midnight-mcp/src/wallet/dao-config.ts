@@ -162,8 +162,8 @@ export DAO="0x1234567890abcdef:0xabcdef1234567890:0x9876543210fedcba:500:1000:Cu
 # export DAO_1="0xabcdef1234567890:0x1111111111111111:0x2222222222222222:1000:2000:Another DAO"
 
 # Note: Vote and fund coin colors are generated automatically using:
-# - Vote coins: tokenType(pad('dega_dao_vote', 32), voteTokenContractAddress)
-# - Fund coins: tokenType(pad('dega_funding_token', 32), fundTokenContractAddress)
+# - Vote coins: tokenType(pad('night_dao_vote', 32), voteTokenContractAddress)
+# - Fund coins: tokenType(pad('night_funding_token', 32), fundTokenContractAddress)
 `;
 }
 

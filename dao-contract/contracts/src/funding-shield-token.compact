@@ -19,7 +19,7 @@ export circuit mint(): [] {
   counter.increment(1);
   const newNonce = evolveNonce(counter, nonce);
   const amount: Uint<64> = 1000;
-  const FUNDING_SHIELD_TOKEN_ASSET_ID: Bytes<32> = pad(32, "dega_funding_token");
+  const FUNDING_SHIELD_TOKEN_ASSET_ID: Bytes<32> = pad(32, "night_funding_token");
 
   tvl = tvl + amount as Uint<64>;
   mintToken(

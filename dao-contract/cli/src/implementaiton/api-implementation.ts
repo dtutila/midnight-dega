@@ -1,5 +1,5 @@
 import { type ContractAddress } from '@midnight-ntwrk/compact-runtime';
-import { MarketplaceRegistry, witnesses } from 'midnight-workshop-dao-contracts';
+import { MarketplaceRegistry, witnesses } from 'dao-contract';
 import { type TransactionId } from '@midnight-ntwrk/ledger';
 import { findDeployedContract } from '@midnight-ntwrk/midnight-js-contracts';
 import { httpClientProofProvider } from '@midnight-ntwrk/midnight-js-http-client-proof-provider';

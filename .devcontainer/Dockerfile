@@ -70,6 +70,25 @@ RUN rm -f /root/.bun/bin/bun && \
     rm bun.zip && \
     chmod +x /root/.bun/bin/bun && \
     /root/.bun/bin/bun --version
+
+
+
+# Create directory for compactc binaries
+RUN mkdir -p /usr/local/compactc
+
+# Download and install compactc
+RUN wget https://d3fazakqrumx6p.cloudfront.net/artifacts/compiler/compactc_0.24.0/compactc_v0.24.0_x86_64-unknown-linux-musl.zip -O /tmp/compactc.zip \
+    && unzip /tmp/compactc.zip -d /usr/local/compactc \
+    && chmod +x /usr/local/compactc/compactc.bin \
+    && chmod +x /usr/local/compactc/zkir \
+    && chmod +x /usr/local/compactc/compactc \
+    && rm /tmp/compactc.zip
+
+# Add compactc to PATH
+ENV PATH="/usr/local/compactc:${PATH}"
+
+# Set COMPACT_HOME environment variable
+ENV COMPACT_HOME="/usr/local/compactc"
 # Default command
 CMD ["bash"]
 

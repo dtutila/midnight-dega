@@ -13,9 +13,9 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-import { DaoShieldedToken, type DaoShieldedTokenPrivateState } from 'midnight-workshop-dao-contracts';
-import { FundingShieldToken, type FundingShieldTokenPrivateState } from 'midnight-workshop-dao-contracts';
-import { DaoVoting, type DaoVotingPrivateState } from 'midnight-workshop-dao-contracts';
+import { DaoShieldedToken, type DaoShieldedTokenPrivateState } from 'dao-contract';
+import { FundingShieldToken, type FundingShieldTokenPrivateState } from 'dao-contract';
+import { DaoVoting, type DaoVotingPrivateState } from 'dao-contract';
 import type { ImpureCircuitId, MidnightProviders } from '@midnight-ntwrk/midnight-js-types';
 import type { DeployedContract, FoundContract } from '@midnight-ntwrk/midnight-js-contracts';
 

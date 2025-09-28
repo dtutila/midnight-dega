@@ -19,7 +19,8 @@ const RoadmapSection = () => {
         "Advanced risk assessment engine",
         "DeFi yield strategy recommendations",
         "Risk analysis agent deployment", 
-        "Strategy agent deployment"
+        "Strategy agent deployment",
+        "DEGA Agent Communication MCP Server"
       ]
     },
     {
@@ -27,7 +28,8 @@ const RoadmapSection = () => {
       status: "future",
       items: [
         "MCP server marketplace for community agents",
-        "Full 6-agent system operational"
+        "Full 6-agent system operational",
+        "DEGA Agents Integration"
       ]
     }
   ];
@@ -48,7 +50,7 @@ const RoadmapSection = () => {
   const getStatusBadge = (status: string) => {
     switch (status) {
       case 'current':
-        return <span className="bg-arcade-purple/20 text-arcade-purple px-3 py-1 rounded-full text-sm font-medium">✅ Current Phase</span>;
+        return <span className="bg-arcade-purple/20 text-arcade-purple px-3 py-1 rounded-full text-sm font-medium">Current Phase</span>;
       case 'upcoming':
         return <span className="bg-gray-800 text-gray-300 px-3 py-1 rounded-full text-sm font-medium">Upcoming</span>;
       case 'future':

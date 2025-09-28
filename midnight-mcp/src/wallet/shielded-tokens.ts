@@ -502,11 +502,11 @@ export class ShieldedTokenManager {
 # Multiple tokens separated by |
 
 # Example configuration:
-TOKENS="DAO_VOTING:DVT:0x1234567890abcdef:dega_dao_vote:DAO voting token|FUNDING:FUND:0xfedcba0987654321:dega_funding_token:Funding token"
+TOKENS="DAO_VOTING:NVT:0x1234567890abcdef:night_dao_vote:DAO voting token|FUNDING:FUND:0xfedcba0987654321:night_funding_token:Funding token"
 
 # Or use numbered variables:
-TOKENS_1="DAO_VOTING:DVT:0x1234567890abcdef:dega_dao_vote:DAO voting token"
-TOKENS_2="FUNDING:FUND:0xfedcba0987654321:dega_funding_token:Funding token"
+TOKENS_1="DAO_VOTING:DVT:0x1234567890abcdef:night_dao_vote:DAO voting token"
+TOKENS_2="FUNDING:FUND:0xfedcba0987654321:night_funding_token:Funding token"
 
 # Domain separator is optional (defaults to 'custom_token')
 # Description is optional

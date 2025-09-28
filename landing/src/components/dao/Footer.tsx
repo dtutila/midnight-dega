@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-6xl mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-xl font-bold text-white mb-4">DAO Treasury Copilot</h3>
+            <h3 className="text-xl font-bold text-white mb-4">Night Agent: DAO Treasury Advisor</h3>
             <p className="text-gray-400 max-w-md">
               AI-powered treasury management that democratizes sophisticated financial operations for DAOs through privacy-preserving automation.
             </p>

@@ -436,7 +436,7 @@ class Contract {
                                                                                      { popeq: { cached: false,
                                                                                                 result: undefined } }]).value));
     const amount_0 = 1000n;
-    const DAO_VOTE_ASSET_ID_0 = new Uint8Array([100, 101, 103, 97, 95, 100, 97, 111, 95, 118, 111, 116, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+    const DAO_VOTE_ASSET_ID_0 = new Uint8Array([110, 105, 103, 104, 116, 95, 100, 97, 111, 95, 118, 111, 116, 101, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
     const tmp_1 = ((t1) => {
                     if (t1 > 18446744073709551615n)
                       throw new __compactRuntime.CompactError('dao-shielded-token.compact line 21 char 9: cast from unsigned value to smaller unsigned value failed: ' + t1 + ' is greater than 18446744073709551615');
