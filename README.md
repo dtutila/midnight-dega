@@ -35,6 +35,15 @@ Watch our demo video showcasing the complete treasury management workflow:
 Experience the landing page and learn more about the project:
 [**Night Agent Landing Page**](https://dega-midnight-dao-treasury.vercel.app/)
 
+## 📋 Smart Contract Addresses
+
+The following smart contracts are deployed on the Midnight blockchain:
+
+- **Funding Token Contract**: `0200c4bb862ac413ae61ab5cceb3fa53383f9a557852c393ea928c4bf1f3235a1b99`
+- **DAO Vote Token Contract**: `0200fd8693fe40ffd31f33b2d62a67e87981fe8f38199d0a14c30ad0a9e23e5aa864`
+- **DAO Voting Contract**: `02001c526626e50b8f849b4aced8f7262b449672a63918fd928ae96aa65da98d9632`
+
+
 ## Project Structure
 
 This monorepo contains four main components:
